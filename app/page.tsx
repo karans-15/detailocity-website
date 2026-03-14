@@ -1,31 +1,32 @@
+"use client";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-black text-white">
-      
-      <div className="text-center">
+    <main className="relative min-h-screen w-full text-white overflow-hidden">
 
-        <img 
-          src="/logo.png"
-          alt="Detailocity logo"
-          className="w-40 mx-auto mb-8"
-        />
+      {/* Background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center hero-bg"
+        style={{ backgroundImage: "url('/hero.png')" }}
+      />
 
-        <h1 className="text-5xl font-semibold mb-2">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-6">
+
+        {/* Brand */}
+        <h1 className="text-6xl md:text-7xl font-semibold tracking-tight mb-6 animate-fade-up">
           Detailocity
         </h1>
 
-        <p className="text-gray-400 text-lg mb-6">
+        <p className="text-lg md:text-xl text-gray-200 mb-14 animate-fade-up delay-200">
           Premium Car Detailing
         </p>
 
-        <div className="border border-gray-700 px-5 py-2 rounded-full text-sm text-gray-300 inline-block">
-          Website Launching Soon
-        </div>
-
-        <div className="mt-8 text-gray-400">
-          📍 Mumbai
-          <br />
-          📞 +91 XXXXX XXXXX
+        <div className="text-3xl md:text-4xl font-light tracking-wide mb-20 text-white/90">
+          Coming Soon<span className="dots"></span>
         </div>
 
       </div>
