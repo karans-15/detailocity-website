@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const font = Space_Grotesk({
@@ -23,7 +24,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${font.className} antialiased`}>
         {children}
+
+        {/* Analytics */}
         <Analytics />
+
+        {/* Performance monitoring */}
+        <SpeedInsights />
       </body>
     </html>
   );
