@@ -71,9 +71,9 @@ body {
   animation: heroZoom 25s ease-in-out infinite alternate;
 }
 
-/* smooth fade in */
+/* subtle fade in */
 
-@keyframes fade {
+@keyframes fadeUp {
   from {
     opacity: 0;
     transform: translateY(16px);
@@ -84,10 +84,18 @@ body {
   }
 }
 
-.animate-fade {
-  animation: fade 1.2s ease forwards;
+.animate-fade-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
 }
 
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
 
 /* animated dots */
 
@@ -104,6 +112,8 @@ body {
   100% { content: ""; }
 }
 
+/* cinematic background zoom */
+
 .hero-bg {
   animation: heroZoom 30s ease-in-out infinite alternate;
 }
@@ -114,5 +124,13 @@ body {
   }
   to {
     transform: scale(1.05);
+  }
+}
+
+/* disable animation on mobile for performance */
+
+@media (max-width: 768px) {
+  .hero-bg {
+    animation: none;
   }
 }
